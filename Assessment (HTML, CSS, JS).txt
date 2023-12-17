@@ -1,0 +1,431 @@
+Assessment (HTML, CSS, JS):
+
+.html :
+
+<!DOCTYPE html>
+<html>
+
+<head> </head>
+
+<body>
+    <div class="main-container">
+        <div class="input-box-and-button-container">
+            <div class="input-box-container">
+                <input type="search" id="searchInput" placeholder="Search here..." class="search-input-element" />
+                <img class="seach-icon" src="https://img.icons8.com/external-others-iconmarket/64/external-lense-search-others-iconmarket-2.png" alt="external-lense-search-others-iconmarket-2" />
+            </div>
+            <button class="button" id="listButton"><img class="list-grid-icon" src="https://img.icons8.com/pastel-glyph/64/list.png" alt="list" /></button>
+            <button class="button" id="gridButton"><img class="list-grid-icon" src="https://img.icons8.com/material-outlined/24/grid.png" alt="grid" /></button>
+        </div>
+        <ul class="product-list-container" id="productListContainer">
+
+        </ul>
+    </div>
+</body>
+
+</html>
+
+---------------------------------------------------------------------
+.css :
+
+.main-container {
+    background-image: linear-gradient(#b6eef2, #66e9f2, #1a9ef0);
+    min-height: 100vh;
+    padding: 25px;
+    width: 400px;
+}
+
+@media screen and (min-width: 768px) {
+    .main-container {
+        width: 100%;
+        padding: 40px;
+    }
+}
+
+.input-box-and-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.input-box-container {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 45px;
+    background-color: #f2f2f2;
+    border-radius: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.seach-icon {
+    width: 30px;
+    height: 25px;
+}
+
+.search-input-element {
+    width: 85%;
+    height: 45px;
+    color: #050505;
+    background-color: transparent;
+    font-family: "Roboto";
+    padding-left: 10px;
+    border: 0;
+    font-size: 18px;
+    outline: 0;
+}
+
+.list-grid-icon {
+    width: 40px;
+    height: 30px;
+}
+
+.button {
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    margin-left: 25px;
+}
+
+@media screen and (min-width: 768px) {
+    .input-box-container {
+        height: 55px;
+    }
+
+    .search-input-element {
+        height: 53px;
+        font-size: 24px;
+    }
+
+    .seach-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .list-grid-icon {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.product-list-container {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.product-list-container-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-list-item {
+    border: 1px solid #070347;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #ccd9ff;
+    height: 100px;
+    width: 100%;
+    display: flex;
+}
+
+.product-list-item-grid {
+    width: 40%;
+    flex-direction: column;
+    height: 250px;
+}
+
+.product-name-and-other-details-container-grid {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-and-badge-container {
+    width: 45%;
+    display: flex;
+}
+
+.profile-and-badge-container-grid {
+    width: 100%;
+}
+
+.product-badge {
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.product-badge-container {
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0066ff;
+}
+
+.product-badge-container-empty {
+    width: 50px;
+    height: 30px;
+}
+
+.product-image {
+    width: 70px;
+    height: 90px;
+    margin-left: 30px;
+}
+
+.product-name {
+    color: black;
+    font-family: "Sans-Serif";
+    font-weight: 800;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+@media screen and (min-width: 768px) {
+    .product-name {
+        font-size: 28px;
+    }
+
+    .product-image {
+        width: 90px;
+        height: 130px;
+    }
+
+    .product-badge {
+        font-size: 21px;
+    }
+
+    .product-badge-container {
+        width: 70px;
+        height: 40px;
+        border-radius: 8px;
+    }
+
+    .product-badge-container-empty {
+        width: 60px;
+        height: 40px;
+    }
+
+    .product-list-item {
+        height: 150px;
+    }
+
+    .product-list-item-grid {
+        height: 300px;
+    }
+
+    .profile-and-badge-container-grid {
+        justify-content: center;
+    }
+}
+
+.product-variant-list-container {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.variant-list-item-selected {
+    background-color: #ff3333;
+    margin-bottom: 5px;
+    padding: 3px;
+}
+
+.variant-text {
+    color: #1a1a00;
+    font-family: "Roboto";
+    font-size: 17px;
+    margin: 0;
+}
+
+.variant-text-selected {
+    color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+    .variant-text {
+        font-size: 25px;
+    }
+}
+
+---------------------------------------------------------------------
+
+.js :
+
+let url = "https://products-api-2ttf.onrender.com/api/products";
+let listButtonElement = document.getElementById("listButton");
+let gridButtonElement = document.getElementById("gridButton");
+let listContainer = document.getElementById("productListContainer");
+let searchInputElement = document.getElementById("searchInput");
+let searchResult = "";
+
+let productList = [];
+let options = {
+    method: "GET",
+};
+let view = "LIST";
+
+function emptyList() {
+    if (listContainer) {
+        while (listContainer.firstChild) {
+            listContainer.removeChild(listContainer.firstChild);
+        }
+    }
+}
+
+function createNewProduct(newProduct) {
+    let listItem = document.createElement("li");
+    listItem.classList.add("product-list-item");
+    if (view === "GRID") {
+        listContainer.classList.add("product-list-container-grid");
+        listItem.classList.add("product-list-item-grid");
+    } else {
+        listItem.classList.remove("product-list-item-grid");
+    }
+    let productBadgeContainer = document.createElement("div");
+    if (newProduct.product_badge !== "") {
+        productBadgeContainer.classList.add("product-badge-container");
+    } else {
+        productBadgeContainer.classList.add("product-badge-container-empty");
+    }
+
+    let productBadge = document.createElement("p");
+    productBadge.textContent = newProduct.product_badge;
+    productBadge.classList.add("product-badge");
+    productBadgeContainer.appendChild(productBadge);
+
+    let profileAndBadgeContainer = document.createElement("div");
+    profileAndBadgeContainer.classList.add("profile-and-badge-container");
+    if (view === "GRID") {
+        profileAndBadgeContainer.classList.add("profile-and-badge-container-grid");
+    }
+    profileAndBadgeContainer.appendChild(productBadgeContainer);
+
+    let productImage = document.createElement("img");
+    productImage.src = newProduct.product_image;
+    productImage.classList.add("product-image");
+    profileAndBadgeContainer.appendChild(productImage);
+
+    let productNameAndOtherDetailsContainer = document.createElement("div");
+    if (view === "GRID") {
+        productNameAndOtherDetailsContainer.classList.add("product-name-and-other-details-container-grid");
+    }
+    let productName = document.createElement("h1");
+    productName.textContent = newProduct.product_title;
+    productName.classList.add("product-name");
+    productNameAndOtherDetailsContainer.appendChild(productName);
+
+    let productVariantListContainer = document.createElement("ul");
+    productVariantListContainer.classList.add("product-variant-list-container");
+
+
+
+    // product_variants - 1
+    let variantItemOne = document.createElement("li");
+    let variantTextOne = document.createElement("p");
+    variantTextOne.classList.add("variant-text");
+    variantTextOne.textContent = newProduct.product_variants[0].v1;
+
+    if (searchResult !== "" && newProduct.product_variants[0].v1.toLowerCase().includes(searchResult.toLowerCase())) {
+        variantItemOne.classList.add("variant-list-item-selected");
+        variantTextOne.classList.add("variant-text-selected");
+    } else {
+        variantItemOne.classList.remove("variant-list-item-selected");
+        variantTextOne.classList.remove("variant-text-selected");
+    }
+    variantItemOne.appendChild(variantTextOne);
+    productVariantListContainer.appendChild(variantItemOne);
+    productNameAndOtherDetailsContainer.appendChild(productVariantListContainer);
+
+    // product_variants - 2
+    let variantItemTwo = document.createElement("li");
+    let variantTextTwo = document.createElement("p");
+    variantTextTwo.classList.add("variant-text");
+    variantTextTwo.textContent = newProduct.product_variants[1].v2;
+    if (searchResult !== "" && newProduct.product_variants[1].v2.toLowerCase().includes(searchResult.toLowerCase())) {
+        variantItemTwo.classList.add("variant-list-item-selected");
+        variantTextTwo.classList.add("variant-text-selected");
+    } else {
+        variantItemTwo.classList.remove("variant-list-item-selected");
+        variantTextTwo.classList.remove("variant-text-selected");
+    }
+    variantItemTwo.appendChild(variantTextTwo);
+    productVariantListContainer.appendChild(variantItemTwo);
+    productNameAndOtherDetailsContainer.appendChild(productVariantListContainer);
+
+    // product_variants - 3
+    let variantItemThree = document.createElement("li");
+    let variantTextThree = document.createElement("p");
+    variantTextThree.classList.add("variant-text");
+    variantTextThree.textContent = newProduct.product_variants[2].v3;
+    if (searchResult !== "" && newProduct.product_variants[2].v3.toLowerCase().includes(searchResult.toLowerCase())) {
+        variantItemThree.classList.add("variant-list-item-selected");
+        variantTextThree.classList.add("variant-text-selected");
+    } else {
+        variantItemThree.classList.remove("variant-list-item-selected");
+        variantTextThree.classList.remove("variant-text-selected");
+    }
+    variantItemThree.appendChild(variantTextThree);
+    productVariantListContainer.appendChild(variantItemThree);
+    productNameAndOtherDetailsContainer.appendChild(productVariantListContainer);
+
+
+    listItem.appendChild(profileAndBadgeContainer);
+    listItem.appendChild(productNameAndOtherDetailsContainer);
+    listContainer.appendChild(listItem);
+}
+
+let getProductData = async () => {
+    try {
+        let apiResponse = await fetch(url, options);
+        let responseData = await apiResponse.json();
+        //console.log(responseData.data);
+        productList = responseData.data;
+    } catch (error) {
+        console.log(error);
+    }
+    for (let eachProduct of productList) {
+        createNewProduct(eachProduct);
+    }
+
+};
+getProductData();
+
+function onSearchProduct(event) {
+    emptyList();
+    searchResult = event.target.value;
+    getProductData();
+}
+
+
+
+function onToggleListView(type) {
+    emptyList();
+    getProductData();
+    view = type;
+}
+
+listButtonElement.onclick = function() {
+    onToggleListView("LIST");
+};
+
+gridButtonElement.onclick = function() {
+    onToggleListView("GRID");
+};
+
+searchInputElement.addEventListener("change", onSearchProduct);
